@@ -27,3 +27,5 @@ SELECT p.id as pedido_id,
 	   p.total as total_registrado
 	   coalesce((SELECT SUM(subtotal) FROM Detalles_Pedido WHERE pedido_id = p.id), 0) as total_calculado
 FROM Pedidos p;
+
+
